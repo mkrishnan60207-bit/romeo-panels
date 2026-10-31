@@ -22,3 +22,4 @@ const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log("Server running on port " + PORT);
 });
+"test.html"<script> document.getElementById('payBtn').addEventListener('click', function() { alert('Test payment clicked!'); }); .
