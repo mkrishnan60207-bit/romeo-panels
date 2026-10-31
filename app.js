@@ -1,17 +1,48 @@
 const products = [
- {name:"Digital Template Pack",desc:"Editable design templates",price:49,icon:"✦"},
- {name:"Creator Resource Kit",desc:"Assets for creators",price:99,icon:"◇"},
- {name:"Study Planner Bundle",desc:"Printable planner",price:149,icon:"▤"},
- {name:"Premium Wallpaper Set",desc:"Digital wallpapers",price:199,icon:"✧"},
- {name:"PHANTOM Training - 1 Hour",desc:"Standalone Training Access",price:29,icon:"♛"},
- {name:"PHANTOM Training - 3 Hours",desc:"Standalone Training Access",price:59,icon:"♛"},
- {name:"PHANTOM Training - 6 Hours",desc:"Standalone Training Access",price:89,icon:"♛"},
- {name:"PHANTOM Training - 12 Hours",desc:"Standalone Training Access",price:119,icon:"♛"},
- {name:"PHANTOM Training - 1 Day",desc:"Standalone Training Access",price:185,icon:"♛"},
- {name:"PHANTOM Training - 3 Days",desc:"Standalone Training Access",price:330,icon:"♛"},
- {name:"PHANTOM Training - 7 Days",desc:"Standalone Training Access",price:499,icon:"♛"},
- {name:"PHANTOM Training - 15 Days",desc:"Standalone Training Access",price:930,icon:"♛"},
- {name:"PHANTOM Training - 30 Days",desc:"Standalone Training Access",price:1449,icon:"♛"}
+  {
+    name: "Digital Template Pack",
+    desc: "Editable design templates",
+    price: 49,
+    icon: "✦",
+    durations: [{ label: "Standard", price: 49 }]
+  },
+  {
+    name: "Creator Resource Kit",
+    desc: "Assets for creators",
+    price: 99,
+    icon: "◇",
+    durations: [{ label: "Standard", price: 99 }]
+  },
+  {
+    name: "Study Planner Bundle",
+    desc: "Printable planner",
+    price: 149,
+    icon: "▤",
+    durations: [{ label: "Standard", price: 149 }]
+  },
+  {
+    name: "Premium Wallpaper Set",
+    desc: "Digital wallpapers",
+    price: 199,
+    icon: "✧",
+    durations: [{ label: "Standard", price: 199 }]
+  },
+  {
+    name: "Digital Training Course",
+    desc: "Standalone Digital Training",
+    icon: "♛",
+    durations: [
+      { label: "1 Hour", price: 29 },
+      { label: "3 Hours", price: 59 },
+      { label: "6 Hours", price: 89 },
+      { label: "12 Hours", price: 119 },
+      { label: "1 Day", price: 185 },
+      { label: "3 Days", price: 330 },
+      { label: "7 Days", price: 499 },
+      { label: "15 Days", price: 930 },
+      { label: "30 Days", price: 1449 }
+    ]
+  }
 ];
 let balance=0, user=null, orders=[];
 const grid=document.getElementById("productGrid");
