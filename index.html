@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ROMEO PANELS | Digital Store</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#"><span class="crown">♛</span><span>ROMEO <b>PANELS</b><small>PLAY • BUY • ENJOY</small></span></a>
+  <nav><a href="#home">Home</a><a href="#products">Products</a><a href="#wallet">Wallet</a><a href="#orders">Orders</a></nav>
+  <div class="auth"><button class="outline" id="loginBtn">Login</button><button id="registerBtn">Register</button></div>
+</header>
+<main>
+<section class="hero" id="home">
+  <div><p class="eyebrow">WELCOME TO</p><h1>ROMEO <em>PANELS</em></h1><h2>Your Digital Products Store</h2><p class="muted">Discover useful, legitimate digital products in one place.</p><a class="primary linkbtn" href="#products">Explore Products →</a></div>
+  <div class="hero-art"><div class="orb">RP</div><div class="orbit"></div><p>NEON BLUE<br><strong>EDITION</strong></p></div>
+</section>
+<div class="notice">Preview storefront • Demo interactions only • No real payments are processed</div>
+<div class="layout">
+<section class="content">
+  <section id="products"><div class="section-head"><h2>Our Products</h2><span class="muted">Sample catalogue</span></div><div class="grid" id="productGrid"></div></section>
+  <section id="orders" class="panel"><h2>My Orders</h2><p class="muted" id="ordersText">Sign in to view your order history.</p></section>
+</section>
+<aside>
+  <section class="panel" id="account"><h2>User Dashboard</h2><p id="welcome" class="muted">You are browsing as a guest.</p><div class="balance"><span>Demo wallet balance</span><strong id="balance">₹0.00</strong></div><button class="full" id="addMoney">Try demo top-up</button><p class="tiny">Demo only: this does not collect or transfer money.</p></section>
+  <section class="panel" id="wallet"><h2>Wallet</h2><p class="muted">Real UPI payments require a verified payment provider and secure server-side confirmation.</p><div class="qr-placeholder">UPI<br>PAYMENT<br>SETUP</div></section>
+  <section class="panel"><h2>Admin</h2><p class="muted">Admin tools must be protected by server-side roles before launch.</p><button class="outline full" id="adminInfo">Admin setup notes</button></section>
+</aside>
+</div>
+</main>
+<footer>© 2026 ROMEO PANELS · Built for legitimate digital products</footer>
+<dialog id="authDialog"><form method="dialog" class="dialog"><button class="close" aria-label="Close">×</button><h2 id="dialogTitle">Login</h2><label>Email<input type="email" id="email" required placeholder="you@example.com"></label><label>Password<input type="password" id="password" required minlength="8" placeholder="At least 8 characters"></label><p class="tiny">Prototype sign-in only. Connect a real authentication service before publishing.</p><button class="full" id="authSubmit" value="default">Continue</button></form></dialog>
+<script src="app.js"></script>
+</body></html>
