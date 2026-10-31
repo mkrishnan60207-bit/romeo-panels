@@ -1,8 +1,15 @@
-const products=[
+const products = [
  {name:"Digital Template Pack",desc:"Editable design templates",price:49,icon:"✦"},
- {name:"Creator Resource Kit",desc:"Assets for content creators",price:99,icon:"◇"},
- {name:"Study Planner Bundle",desc:"Printable planning resources",price:149,icon:"▤"},
- {name:"Premium Wallpaper Set",desc:"Original digital wallpapers",price:199,icon:"✧"}
+ {name:"Creator Resource Kit",desc:"Assets for creators",price:99,icon:"◇"},
+ {name:"Study Planner Bundle",desc:"Printable planner",price:149,icon:"▤"},
+ {name:"Premium Wallpaper Set",desc:"Digital wallpapers",price:199,icon:"✧"},
+
+ {name:"PHANTOM Training - 1 Hour",desc:"Training Access",price:29,icon:"♛"},
+ {name:"PHANTOM Training - 3 Hours",desc:"Training Access",price:59,icon:"♛"},
+ {name:"PHANTOM Training - 6 Hours",desc:"Training Access",price:89,icon:"♛"},
+ {name:"PHANTOM Training - 12 Hours",desc:"Training Access",price:119,icon:"♛"},
+ {name:"PHANTOM Training - 1 Day",desc:"Training Access",price:185,icon:"♛"},
+ {name:"PHANTOM
 ];
 let balance=0, user=null, orders=[];
 const grid=document.getElementById("productGrid");
