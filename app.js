@@ -1,5 +1,4 @@
-const products = [
- {name:"Digital Template Pack",desc:"Editable design templates",price:49,icon:"✦"},
+const products ={name:"Digital Template Pack",desc:"Editable design templates",price:49,icon:"✦"},
  {name:"Creator Resource Kit",desc:"Assets for creators",price:99,icon:"◇"},
  {name:"Study Planner Bundle",desc:"Printable planner",price:149,icon:"▤"},
  {name:"Premium Wallpaper Set",desc:"Digital wallpapers",price:199,icon:"✧"},
@@ -9,8 +8,7 @@ const products = [
  {name:"PHANTOM Training - 6 Hours",desc:"Training Access",price:89,icon:"♛"},
  {name:"PHANTOM Training - 12 Hours",desc:"Training Access",price:119,icon:"♛"},
  {name:"PHANTOM Training - 1 Day",desc:"Training Access",price:185,icon:"♛"},
- {name:"PHANTOM
-];
+ {name:"PHANTOM];
 let balance=0, user=null, orders=[];
 const grid=document.getElementById("productGrid");
 function render(){grid.innerHTML=products.map((p,i)=>`<article class="product"><div class="product-icon">${p.icon}</div><h3>${p.name}</h3><p class="muted">${p.desc}</p><div class="price">₹${p.price}</div><button data-buy="${i}">Buy Now</button></article>`).join("");document.getElementById("balance").textContent=`₹${balance.toFixed(2)}`;document.getElementById("welcome").textContent=user?`Signed in for this demo: ${user}`:"You are browsing as a guest.";document.getElementById("ordersText").textContent=orders.length?orders.map(o=>`${o.name} — ₹${o.price} (demo)`).join(" • "):"No demo orders yet."}
