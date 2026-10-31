@@ -15,8 +15,45 @@ const products = [
 ];
 let balance=0, user=null, orders=[];
 const grid=document.getElementById("productGrid");
-function render(){grid.innerHTML=products.map((p,i)=>`<article class="product"><div class="product-icon">${p.icon}</div><h3>${p.name}</h3><p class="muted">${p.desc}</p><div class="price">₹${p.price}</div><button data-buy="${i}">Buy Now</button></article>`).join("");document.getElementById("balance").textContent=`₹${balance.toFixed(2)}`;document.getElementById("welcome").textContent=user?`Signed in for this demo: ${user}`:"You are browsing as a guest.";document.getElementById("ordersText").textContent=orders.length?orders.map(o=>`${o.name} — ₹${o.price} (demo)`).join(" • "):"No demo orders yet."}
-grid.addEventListener("click",e=>{const i=e.target.dataset.buy;if(i===undefined)return;const p=products[Number(i)];if(!user){alert("Please use Register or Login first (demo only).");return}if(balance<p.price){alert("Demo wallet balance is too low. Use Try demo top-up.");return}balance-=p.price;orders.push(p);render();alert("Demo order recorded. No real product or payment was processed.")});
+function render() {
+  grid.innerHTML = products.map((p, i) => `
+    <article class="product">
+      <div class="product-icon">${p.icon}</div>
+
+      <h3>${p.name}</h3>
+      <p class="muted">${p.desc}</p>
+
+      <label>Select Duration:</label>
+
+      <select class="duration-select" data-duration="${i}">
+        ${p.durations.map((d, j) => `
+          <option value="${j}">
+            ${d.label} - ₹${d.price}
+          </option>
+        `).join("")}
+      </select>
+
+      <div class="price" id="price-${i}">
+        ₹${p.durations[0].price}
+      </div>
+
+      <button data-buy="${i}">Buy Now</button>
+    </article>
+  `).join("");
+
+  document.getElementById("balance").textContent =
+    `₹${balance.toFixed(2)}`;
+
+  document.getElementById("welcome").textContent =
+    user
+      ? `Signed in for this demo: ${user}`
+      : "You are browsing as a guest.";
+
+  document.getElementById("ordersText").textContent =
+    orders.length
+      ? orders.map(o => `${o.name} — ₹${o.price} (demo)`).join(" • ")
+      : "No demo orders yet.";
+}
 const dlg=document.getElementById("authDialog");let mode="Login";
 function openAuth(m){mode=m;document.getElementById("dialogTitle").textContent=m;dlg.showModal()}
 document.getElementById("loginBtn").onclick=()=>openAuth("Login");
